@@ -1,17 +1,10 @@
-<div class="col-sm-7" ng-controller="RequestsCtrl">
+<div class="col-sm-12" ng-controller="RequestsCtrl">
 
-    <div class="row" ng-repeat="request in requests">
-        <div class="col-xs-12">
-            Guggus {{request.className}}!
-        </div>
-        <hr>
-    </div>
-    <div>
-        <label for="valueToChange">Some value to change:</label>
-        <input id="valueToChange" type="number" ng-model="secondRow[1].v"/>
+    <div ng-repeat="endpoint in endpoints">
+        <input id="{{endpoint}}" type="checkbox"/>
+        <label for="{{endpoint}}"> {{endpoint}}</label>
     </div>
 
     <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
-
 
 </div>
