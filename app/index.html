@@ -1,43 +1,133 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Optimist Blog</title>
+    <meta name="description" content="Optimist Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#/home">Home</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        </button>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        </ul>
+    </div>
+</nav>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<div class="container-fluid">
 
-  <div ng-view></div>
+    <div class="col-sm-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">Latest News Headlines</div>
+            <div class="panel-body">
+                <a href="http://blog.eisele.net/2015/05/docker-maschine-on-windows-host-setup-howto.html"
+                   target="_blank">
+                    Docker Maschine on Windows - How To Setup You Hosts
+                </a>
+                &nbsp;
+                <small>06.05.2015 by Markus Eisele</small>
+            </div>
+            <div class="panel-body">
+                <a href="http://blog.arungupta.me/wildfly-swarm-microservices-javaee/" target="_blank">
+                    WildFly Swarm: Building Microservices with Java EE
+                </a>
+                &nbsp;
+                <small>06.05.2015 by Arun Gupta</small>
+            </div>
+            <div class="panel-body">
+                <a href="http://blog.eisele.net/2015/04/continuous-delivery-with-docker.html" target="_blank">
+                    Continuous Delivery with Docker Containers and Java EE
+                </a>
+                &nbsp;
+                <small>30.04.2015 by Markus Eisele</small>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!--/left-->
 
-  <div>Angular seed app: v<span app-version></span></div>
+    <div ng-view></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+    <!--right-->
+    <div class="col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Robert Brem</div>
+            <div class="panel-body">
+
+                <p>
+                    Software Engineer<br/>
+                    Transhumanist<br/>
+                    Optimist
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading">Technical<br/>Topics of Interest</div>
+            <div class="panel-body">
+                <a href="http://kubernetes.io/" target="_blank">Kubernetes</a><br/>
+                <a href="https://www.docker.com/" target="_blank">Docker</a><br/>
+                <a href="http://netflix.github.io/#repo" target="_blank">Netflix OSS</a><br/>
+                <a href="https://github.com/javaee-samples" target="_blank">Java EE</a><br/>
+                <a href="https://github.com/angular/angular-seed" target="_blank">AngularJS</a>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading">Architectural<br/>Topics of Interest</div>
+            <div class="panel-body">
+                <a href="https://www.youtube.com/watch?v=2rKEveL55TY" target="_blank">Microservices</a><br/>
+                <a href="https://www.youtube.com/watch?v=uk-CF7klLdA" target="_blank">Programmer Anarchy</a><br/>
+                <a href="https://jaxenter.de/unkaputtbar-einfuehrung-resilient-software-design-15119" target="_blank">
+                    Resilient Software Design
+                </a><br/>
+                <a href="https://www.youtube.com/watch?v=TcbmRRy-vno" target="_blank">Lean Enterprise</a><br/>
+                <a href="http://www.amazon.de/The-Phoenix-Project-Helping-Business/dp/0988262592"
+                   target="_blank">DevOps</a>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-default">
+            <div class="panel-heading">Other<br/>Topics of Interest</div>
+            <div class="panel-body">
+                <a href="https://www.youtube.com/watch?v=L4wyU6GTCPE" target="_blank">American Football</a><br/>
+                <a href="https://www.youtube.com/watch?v=QCsiBLz6qqo" target="_blank">Arduino</a><br/>
+                <a href="https://www.youtube.com/watch?v=QJsHRltEVBc" target="_blank">Technological Singularity</a><br/>
+                <a href="https://www.youtube.com/watch?v=M0b6DMGExKo" target="_blank">Poker</a>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!--/right-->
+    <hr>
+</div>
+<!--/container-fluid-->
+<!-- script references -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="configuration.js"></script>
+<script src="views/home/home.js"></script>
 </body>
 </html>
