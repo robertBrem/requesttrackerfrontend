@@ -17,19 +17,17 @@ entriesApp.controller('RequestsCtrl', function ($scope, $http, REQUEST_URL) {
 
     $scope.chartObject.data.rows = [];
 
-    function logArrayElements(element, index, array) {
-        var entry = {
-            c: [
-                {v: new Date(element.callTime)},
-                {v: 2}
-            ]
-        };
-        $scope.chartObject.data.rows.push(entry);
-    }
-
     $http.get(REQUEST_URL).then(function (response) {
         var requests = response.data;
-        requests.forEach(logArrayElements);
+        for (var propertyName in requests) {
+            var entry = {
+                c: [
+                    {v: new Date(propertyName)},
+                    {v: requests[propertyName].length}
+                ]
+            };
+            $scope.chartObject.data.rows.push(entry);
+        }
     });
 
 
