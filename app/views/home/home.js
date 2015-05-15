@@ -84,7 +84,7 @@ entriesApp.controller('RequestsCtrl', function ($scope, $http, REQUEST_URL) {
                         if (hitsPerClassName) {
                             arrayObj.push(hitsPerClassName);
                         } else {
-                            arrayObj.push({v: undefined});
+                            arrayObj.push({v: 0});
                         }
                     }
                 }
